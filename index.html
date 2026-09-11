@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talk to a sales specialist</title>
+    <meta name="description" content="Request an immediate call from our sales team." />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">PERSONALISED SALES SUPPORT</p>
+        <h1>Talk to a specialist<br /><em>right away.</em></h1>
+        <p class="intro">Share your number and we’ll connect you with a sales specialist by phone.</p>
+        <div class="steps" aria-label="How it works">
+          <div><span>01</span>Share your details</div>
+          <div><span>02</span>Our specialist is called</div>
+          <div><span>03</span>You are connected</div>
+        </div>
+      </section>
+      <section class="card" aria-labelledby="form-title">
+        <div class="status-dot" aria-hidden="true"></div>
+        <p class="available">Sales team available</p>
+        <h2 id="form-title">Request a callback</h2>
+        <p class="subcopy">Usually within a minute during business hours.</p>
+        <form id="callback-form" novalidate>
+          <label for="name">Your name</label>
+          <input id="name" name="name" maxlength="80" autocomplete="name" required placeholder="Enter your name" />
+          <label for="phone">Mobile number</label>
+          <div class="phone-field"><span>+91</span><input id="phone" name="phone" inputmode="numeric" autocomplete="tel" maxlength="14" required placeholder="10-digit mobile number" /></div>
+          <div class="honeypot" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off" /></div>
+          <button id="submit-button" type="submit">Call me now <span aria-hidden="true">→</span></button>
+          <p class="consent">By requesting a callback, you agree to receive a phone call about your enquiry.</p>
+          <p id="form-message" class="message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
