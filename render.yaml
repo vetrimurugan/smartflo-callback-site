@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: smartflo-callback-site
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    healthCheckPath: /health
+    envVars:
+      - key: SMARTFLO_API_TOKEN
+        sync: false
+      - key: SMARTFLO_AGENT_NUMBER
+        sync: false
+      - key: SMARTFLO_CALLER_ID
+        sync: false
+      - key: SMARTFLO_CALL_TIMEOUT
+        value: "300"
